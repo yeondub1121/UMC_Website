@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import headerLogo from '../assets/header.svg'; 
+import { Link } from 'react-router-dom';
+import headerLogo from '../assets/header.svg';
 
 const HeaderContainer = styled.header`
-  background: linear-gradient(90deg, #052309, #148923);
+  background: #102D2D;
   color: white;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 80px; 
+  height: 80px;
   display: flex;
-  align-items: center; 
+  align-items: center;
 `;
 
 const NavContainer = styled.nav`
@@ -20,12 +19,12 @@ const NavContainer = styled.nav`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px; 
+  padding: 0 16px;
 `;
 
 const Logo = styled.img`
-  height: 50px; 
-  width: auto; 
+  height: 50px;
+  width: auto;
 `;
 
 const NavLinks = styled.ul`
@@ -38,7 +37,8 @@ const NavLink = styled.li`
   a {
     color: white;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
+     font-weight: bold;
 
     &:hover {
       color: #cfcfcf;
@@ -50,18 +50,16 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <NavContainer>
-      
         <Logo src={headerLogo} alt="Header Logo" />
-      
         <NavLinks>
           <NavLink>
-            <a href="#about">소개</a>
+            <Link to="/">소개</Link>
           </NavLink>
           <NavLink>
-            <a href="#projects">프로젝트</a>
+            <Link to="/project">프로젝트</Link>
           </NavLink>
           <NavLink>
-            <a href="#apply">지원하기</a>
+            <Link to="/recruit">모집</Link>
           </NavLink>
         </NavLinks>
       </NavContainer>
