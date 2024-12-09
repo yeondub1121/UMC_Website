@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import headerLogo from '../assets/header.svg';
 
 const HeaderContainer = styled.header`
@@ -33,17 +33,19 @@ const NavLinks = styled.ul`
   gap: 24px;
 `;
 
-const NavLink = styled.li`
-  a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-     font-weight: bold;
+const NavLinkStyled = styled(NavLink)`
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 
-    &:hover {
-      color: #cfcfcf;
-    }
+  &:hover {
+    color: #cfcfcf;
   }
+
+  &.active {
+    color: #8FBE8C; 
+  } 
 `;
 
 const Header: React.FC = () => {
@@ -52,15 +54,21 @@ const Header: React.FC = () => {
       <NavContainer>
         <Logo src={headerLogo} alt="Header Logo" />
         <NavLinks>
-          <NavLink>
-            <Link to="/">소개</Link>
-          </NavLink>
-          <NavLink>
-            <Link to="/project">프로젝트</Link>
-          </NavLink>
-          <NavLink>
-            <Link to="/recruit">모집</Link>
-          </NavLink>
+          <li>
+            <NavLinkStyled to="/" exact>
+              소개
+            </NavLinkStyled>
+          </li>
+          <li>
+            <NavLinkStyled to="/project">
+              프로젝트
+            </NavLinkStyled>
+          </li>
+          <li>
+            <NavLinkStyled to="/recruit">
+              모집
+            </NavLinkStyled>
+          </li>
         </NavLinks>
       </NavContainer>
     </HeaderContainer>
