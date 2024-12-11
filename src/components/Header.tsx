@@ -30,14 +30,14 @@ const Logo = styled.img`
 const NavLinks = styled.ul`
   display: flex;
   list-style: none;
-  gap: 24px;
+  gap: 40px;
 `;
 
 const NavLinkStyled = styled(NavLink)`
   color: white;
   text-decoration: none;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
 
   &:hover {
     color: #cfcfcf;
@@ -45,6 +45,7 @@ const NavLinkStyled = styled(NavLink)`
 
   &.active {
     color: #8FBE8C; 
+    font-weight: bold;
   } 
 `;
 
