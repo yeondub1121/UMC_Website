@@ -11,6 +11,7 @@ const FooterContainer = styled.footer`
   justify-content: center;
   align-items: center;
   padding: 20px;
+  
 `;
 
 const FooterLogo = styled.img`

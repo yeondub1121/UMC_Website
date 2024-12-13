@@ -28,7 +28,7 @@ const Title = styled.h1`
 const Recruit: React.FC = () => {
   return (
     <Container>
-      <Title>Recruit Page</Title>
+      <Title></Title>
     </Container>
   );
 };
