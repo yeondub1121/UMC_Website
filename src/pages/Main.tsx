@@ -28,7 +28,7 @@ const Title = styled.h1`
 const Main: React.FC = () => {
   return (
     <Container>
-      <Title>여기다 뭐 넣지?</Title>
+      <Title></Title>
     </Container>
   );
 };
