@@ -13,22 +13,20 @@ const ProjectImage = styled.img`
   border-radius: 15px;
 `;
 
-const ProjectTitle = styled.h2`
+/* const ProjectTitle = styled.h2`
   margin: 20px 0 10px;
   font-size: 22px;
-`;
+`; */
 
-const ProjectDescription = styled.p`
+/* const ProjectDescription = styled.p`
   font-size: 16px;
   line-height: 1.5;
-`;
+`; */
 
-const Seventh_Project: React.FC = () => (
+const Project7: React.FC = () => (
   <ProjectDisplay>
     <ProjectImage src={waitingImage} alt="7기 프로젝트" />
-    <ProjectTitle></ProjectTitle>
-    <ProjectDescription></ProjectDescription>
   </ProjectDisplay>
 );
 
-export default Seventh_Project;
+export default Project7;

@@ -1,11 +1,24 @@
-import React, { useState, useRef, useEffect } from 'react';
-import styled from 'styled-components';
-import Sixth_Project from '../components/project/6th_Project';
-import Seventh_Project from '../components/project/7th_Project';
+import React, { useState, useRef, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
+import Project6 from "../components/project/Project6th";
+import Project7 from "../components/project/Project7th";
 
+// 페이드인 애니메이션
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+// 프로젝트 컨테이너
 const ProjectContainer = styled.div<{ extendHeight: boolean }>`
   min-height: 100vh;
-  height: ${(props) => (props.extendHeight ? 'auto' : '100vh')};
+  height: ${(props) => (props.extendHeight ? "auto" : "100vh")};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -24,11 +37,18 @@ const ProjectContainer = styled.div<{ extendHeight: boolean }>`
   box-sizing: border-box;
 `;
 
+// 헤더에 애니메이션 적용
 const Header = styled.h1`
   font-size: 25px;
   color: white;
   margin: 0;
   margin-bottom: 20px;
+  animation: ${fadeIn} 1s ease-out;
+`;
+
+// 프로젝트 콘텐츠에 애니메이션 적용
+const ContentWrapper = styled.div`
+  animation: ${fadeIn} 1.5s ease-out;
 `;
 
 const DropdownWrapper = styled.div`
@@ -54,13 +74,12 @@ const DropdownButton = styled.button`
   display: flex;
   align-items: center;
   gap: 10px;
-  height: 50px; 
+  height: 50px;
 
   &:hover {
     background: rgba(255, 255, 255, 0.1);
   }
 `;
-
 
 const DropdownArrow = styled.span`
   width: 0;
@@ -70,40 +89,42 @@ const DropdownArrow = styled.span`
   border-top: 6px solid white;
 `;
 
-const DropdownMenu = styled.ul`
+const DropdownMenu = styled.ul<{ show: boolean }>`
   position: absolute;
   top: calc(100% + 10px);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) ${(props) => (props.show ? "translateY(0)" : "translateY(-10px)")};
   background: black;
   border-radius: 15px;
   padding: 10px;
   list-style: none;
   margin: 0;
-  display: ${(props) => (props.show ? 'block' : 'none')};
+  opacity: ${(props) => (props.show ? "1" : "0")};
+  visibility: ${(props) => (props.show ? "visible" : "hidden")};
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   z-index: 1000;
 `;
+
 
 const DropdownItem = styled.li`
   padding: 10px 20px;
   color: white;
   cursor: pointer;
   white-space: nowrap;
-  text-align: center; 
+  text-align: center;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background: rgba(255, 255, 255, 0.1);
   }
 `;
 
-
 const Project: React.FC = () => {
-  const [selectedBatch, setSelectedBatch] = useState('');
-  const [selectedFrontend, setSelectedFrontend] = useState('');
-  const [selectedBackend, setSelectedBackend] = useState('');
+  const [selectedBatch, setSelectedBatch] = useState("");
+  const [selectedFrontend, setSelectedFrontend] = useState("");
+  const [selectedBackend, setSelectedBackend] = useState("");
   const [batchDropdownOpen, setBatchDropdownOpen] = useState(false);
   const [frontendDropdownOpen, setFrontendDropdownOpen] = useState(false);
   const [backendDropdownOpen, setBackendDropdownOpen] = useState(false);
@@ -116,18 +137,18 @@ const Project: React.FC = () => {
   };
 
   const handleSelectBatch = (item: string) => {
-    setSelectedBatch(item === '전체' ? '' : item);
-    setBatchDropdownOpen(false); 
+    setSelectedBatch(item === "전체" ? "" : item);
+    setBatchDropdownOpen(false);
   };
 
   const handleSelectFrontend = (item: string) => {
-    setSelectedFrontend(item === '전체' ? '' : item);
-    setFrontendDropdownOpen(false); 
+    setSelectedFrontend(item === "전체" ? "" : item);
+    setFrontendDropdownOpen(false);
   };
 
   const handleSelectBackend = (item: string) => {
-    setSelectedBackend(item === '전체' ? '' : item);
-    setBackendDropdownOpen(false); 
+    setSelectedBackend(item === "전체" ? "" : item);
+    setBackendDropdownOpen(false);
   };
 
   useEffect(() => {
@@ -135,11 +156,7 @@ const Project: React.FC = () => {
       const contentHeight = contentRef.current.offsetHeight;
       const viewportHeight = window.innerHeight;
 
-      if (contentHeight > viewportHeight - 80) {
-        setExtendHeight(true);
-      } else {
-        setExtendHeight(false);
-      }
+      setExtendHeight(contentHeight > viewportHeight - 80);
     }
   }, [selectedBatch, selectedFrontend, selectedBackend]);
 
@@ -152,56 +169,55 @@ const Project: React.FC = () => {
           {/* 기수 선택 드롭다운 */}
           <DropdownContainer>
             <DropdownButton onClick={() => toggleDropdown(setBatchDropdownOpen)}>
-              {selectedBatch || '기수'}
+              {selectedBatch || "기수"}
               <DropdownArrow />
             </DropdownButton>
             <DropdownMenu show={batchDropdownOpen}>
-              <DropdownItem onClick={() => handleSelectBatch('전체')}>전체</DropdownItem>
-              <DropdownItem onClick={() => handleSelectBatch('6기')}>6기</DropdownItem>
-              <DropdownItem onClick={() => handleSelectBatch('7기')}>7기</DropdownItem>
+              <DropdownItem onClick={() => handleSelectBatch("전체")}>전체</DropdownItem>
+              <DropdownItem onClick={() => handleSelectBatch("6기")}>6기</DropdownItem>
+              <DropdownItem onClick={() => handleSelectBatch("7기")}>7기</DropdownItem>
             </DropdownMenu>
           </DropdownContainer>
 
           {/* 프론트엔드 선택 드롭다운 */}
           <DropdownContainer>
             <DropdownButton onClick={() => toggleDropdown(setFrontendDropdownOpen)}>
-              {selectedFrontend || 'Frontend'}
+              {selectedFrontend || "Frontend"}
               <DropdownArrow />
             </DropdownButton>
             <DropdownMenu show={frontendDropdownOpen}>
-              <DropdownItem onClick={() => handleSelectFrontend('전체')}>전체</DropdownItem>
-              <DropdownItem onClick={() => handleSelectFrontend('Web')}>Web</DropdownItem>
-              <DropdownItem onClick={() => handleSelectFrontend('iOS')}>iOS</DropdownItem>
-              <DropdownItem onClick={() => handleSelectFrontend('Android')}>Android</DropdownItem>
+              <DropdownItem onClick={() => handleSelectFrontend("전체")}>전체</DropdownItem>
+              <DropdownItem onClick={() => handleSelectFrontend("Web")}>Web</DropdownItem>
+              <DropdownItem onClick={() => handleSelectFrontend("iOS")}>iOS</DropdownItem>
+              <DropdownItem onClick={() => handleSelectFrontend("Android")}>Android</DropdownItem>
             </DropdownMenu>
           </DropdownContainer>
 
           {/* 백엔드 선택 드롭다운 */}
           <DropdownContainer>
             <DropdownButton onClick={() => toggleDropdown(setBackendDropdownOpen)}>
-              {selectedBackend || 'Backend'}
+              {selectedBackend || "Backend"}
               <DropdownArrow />
             </DropdownButton>
             <DropdownMenu show={backendDropdownOpen}>
-              <DropdownItem onClick={() => handleSelectBackend('전체')}>전체</DropdownItem>
-              <DropdownItem onClick={() => handleSelectBackend('Spring')}>SpringBoot</DropdownItem>
-              <DropdownItem onClick={() => handleSelectBackend('Node')}>Node.js</DropdownItem>
+              <DropdownItem onClick={() => handleSelectBackend("전체")}>전체</DropdownItem>
+              <DropdownItem onClick={() => handleSelectBackend("Spring")}>SpringBoot</DropdownItem>
+              <DropdownItem onClick={() => handleSelectBackend("Node")}>Node.js</DropdownItem>
             </DropdownMenu>
           </DropdownContainer>
         </DropdownWrapper>
 
-        <div ref={contentRef}>
-          {/* 7기 선택 시에만 Seventh_Project 렌더링 */}
-          {selectedBatch === '7기' ? (
-            <Seventh_Project />
+        <ContentWrapper key={`${selectedBatch}-${selectedFrontend}-${selectedBackend}`} ref={contentRef}>
+          {/* 프로젝트 컴포넌트 */}
+          {selectedBatch === "7기" ? (
+            <Project7 />
           ) : (
-            <Sixth_Project frontendFilter={selectedFrontend} backendFilter={selectedBackend} />
+            <Project6 frontendFilter={selectedFrontend} backendFilter={selectedBackend} />
           )}
-        </div>
+        </ContentWrapper>
       </ProjectContainer>
     </>
   );
 };
 
 export default Project;
-
