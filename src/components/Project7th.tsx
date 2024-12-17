@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import waitingImage from '../../assets/waitingimage.svg'; 
+import waitingImage from '../assets/waitingimage.svg'; 
 
 const ProjectDisplay = styled.div`
   margin-top: 40px;

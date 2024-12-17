@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 
-import exchangeImage from "../../assets/project/6th_1.svg";
-import sixth2Image from "../../assets/project/6th_2.svg";
-import cardifyImage from "../../assets/project/cardify.svg";
-import kiokiImage from "../../assets/project/kioki.svg";
-import kkjukImage from "../../assets/project/kkijuk.svg";
-import letsgoImage from "../../assets/project/letsgo.svg";
-import mediformeImage from "../../assets/project/mediforme.svg";
-import stepperImage from "../../assets/project/stepper.svg";
-import wesaveImage from "../../assets/project/wesave.svg";
-import routeporterImage from "../../assets/project/routeporter.svg";
+import exchangeImage from "../assets/project/6th_1.svg";
+import sixth2Image from "../assets/project/6th_2.svg";
+import cardifyImage from "../assets/project/cardify.svg";
+import kiokiImage from "../assets/project/kioki.svg";
+import kkjukImage from "../assets/project/kkijuk.svg";
+import letsgoImage from "../assets/project/letsgo.svg";
+import mediformeImage from "../assets/project/mediforme.svg";
+import stepperImage from "../assets/project/stepper.svg";
+import wesaveImage from "../assets/project/wesave.svg";
+import routeporterImage from "../assets/project/routeporter.svg";
 
 const ProjectGrid = styled.div`
   display: grid;
