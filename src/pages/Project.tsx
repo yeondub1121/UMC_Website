@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import Project6 from "../components/project/Project6th";
-import Project7 from "../components/project/Project7th";
+import Project6 from "../components/Project6th";
+import Project7 from "../components/Project7th";
 
 // 페이드인 애니메이션
 const fadeIn = keyframes`
