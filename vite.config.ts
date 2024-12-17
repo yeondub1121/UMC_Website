@@ -15,8 +15,11 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      // styled-components 외부화 해제
+      // styled-components를 번들에 포함시킴
       external: [],
+    },
+    commonjsOptions: {
+      include: [/node_modules/], // node_modules 내 CommonJS 파일도 포함
     },
   },
 });
