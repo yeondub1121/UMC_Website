@@ -44,7 +44,7 @@ const NavLinkStyled = styled(NavLink)`
   }
 
   &.active {
-    color: #8FBE8C; 
+    color: #a9f3e3; 
     font-weight: bold;
   } 
 `;
