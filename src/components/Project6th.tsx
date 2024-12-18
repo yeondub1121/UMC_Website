@@ -16,46 +16,95 @@ import routeporterImage from "../assets/project/routeporter.svg";
 const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 30px;
-  width: 45%;
-  justify-items: center;
+  gap: 20px;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 1200px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 `;
 
-const ProjectCard = styled(motion.div)` // motion.div로 변경
+const ProjectCard = styled(motion.div)`
   text-align: center;
-  width: 350px;
-  max-width: 350px;
+  border-radius: 10px;
   padding: 15px;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+   @media (max-width: 375px) {
+    max-width: 100%;
+    padding: 10px;
+  }
 `;
 
 const ProjectImage = styled.img`
-  width: 355px;
-  height: 210px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 10px;
-  margin: 0 auto;
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    height: 180px;
+  }
+
+  @media (max-width: 395px) {
+    max-width: 310px;
+    padding: 10px;
+  }
+
+  @media (max-width: 345px) {
+    max-width: 280px;
+    padding: 10px;
+  }
 `;
 
 const ProjectTitle = styled.h2`
-  margin: 15px 0 10px;
-  font-size: 18px;
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: white;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const ProjectDescription = styled.p`
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #d0d0d0;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const PaginationContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin: 20px 0;
+
+  @media (max-width: 768px) {
+    margin: 10px 0;
+  }
 `;
 
 const PageButton = styled.button<{ active: boolean }>`
   margin: 0 5px;
-  padding: 10px 15px;
+  padding: 8px 12px;
   background: ${(props) => (props.active ? "#174242" : "#1c5151")};
   color: white;
   border: none;
@@ -64,6 +113,11 @@ const PageButton = styled.button<{ active: boolean }>`
 
   &:hover {
     background: #174242;
+  }
+
+  @media (max-width: 768px) {
+    padding: 5px 8px;
+    font-size: 0.8rem;
   }
 `;
 
