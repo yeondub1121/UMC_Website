@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 import Project6 from "../components/Project6th";
 import Project7 from "../components/Project7th";
 
-// 페이드인 애니메이션
+
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -15,7 +15,7 @@ const fadeIn = keyframes`
   }
 `;
 
-// 프로젝트 컨테이너
+
 const ProjectContainer = styled.div<{ extendHeight: boolean }>`
   min-height: 100vh;
   height: ${(props) => (props.extendHeight ? "auto" : "100vh")};
@@ -35,32 +35,53 @@ const ProjectContainer = styled.div<{ extendHeight: boolean }>`
   color: white;
   font-family: Arial, sans-serif;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px;
+    padding-bottom: 20px;
+  }
 `;
 
-// 헤더에 애니메이션 적용
+
 const Header = styled.h1`
   font-size: 25px;
   color: white;
   margin: 0;
   margin-bottom: 20px;
-  animation: ${fadeIn} 1s ease-out;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
 `;
 
-// 프로젝트 콘텐츠에 애니메이션 적용
+
 const ContentWrapper = styled.div`
   animation: ${fadeIn} 1.5s ease-out;
 `;
+
 
 const DropdownWrapper = styled.div`
   display: flex;
   gap: 20px;
   margin-bottom: -5px;
+  justify-content: center; 
+
+  @media (max-width: 768px) {
+    gap: 10px; 
+  }
 `;
 
-const DropdownContainer = styled.div`
-  position: relative;
-  display: inline-block;
-`;
 
 const DropdownButton = styled.button`
   background: transparent;
@@ -79,7 +100,20 @@ const DropdownButton = styled.button`
   &:hover {
     background: rgba(255, 255, 255, 0.1);
   }
+
+  @media (max-width: 768px) {
+    padding: 8px 15px; 
+    font-size: 14px; 
+    height: 40px; 
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px 10px; 
+    font-size: 12px; 
+    height: 35px; 
+  }
 `;
+
 
 const DropdownArrow = styled.span`
   width: 0;
@@ -88,6 +122,7 @@ const DropdownArrow = styled.span`
   border-right: 6px solid transparent;
   border-top: 6px solid white;
 `;
+
 
 const DropdownMenu = styled.ul<{ show: boolean }>`
   position: absolute;
@@ -103,6 +138,12 @@ const DropdownMenu = styled.ul<{ show: boolean }>`
   visibility: ${(props) => (props.show ? "visible" : "hidden")};
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    left: 0;
+    transform: translateX(0) ${(props) => (props.show ? "translateY(0)" : "translateY(-10px)")};
+  }
 `;
 
 
@@ -118,6 +159,25 @@ const DropdownItem = styled.li`
 
   &:hover {
     background: rgba(255, 255, 255, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+`;
+
+const DropdownContainer = styled.div`
+  position: relative;
+  display: inline-block;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: center;
   }
 `;
 
