@@ -23,20 +23,26 @@ const NavContainer = styled.nav`
 `;
 
 const Logo = styled.img`
-  height: 50px;
+  height: 60px;
   width: auto;
+
 `;
 
 const NavLinks = styled.ul`
   display: flex;
   list-style: none;
   gap: 40px;
+
+  @media (max-width: 768px) {
+    gap: 25px;
+  }
 `;
 
 const NavLinkStyled = styled(NavLink)`
   color: white;
   text-decoration: none;
   font-size: 18px;
+  white-space: nowrap;
   font-weight: 500;
 
   &:hover {
@@ -47,6 +53,10 @@ const NavLinkStyled = styled(NavLink)`
     color: #a9f3e3; 
     font-weight: bold;
   } 
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Header: React.FC = () => {
