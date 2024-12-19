@@ -25,6 +25,7 @@ const FooterText = styled.p`
   font-size: 14px;
   text-align: center;
   line-height: 1;
+  font-family: Light;
 `;
 
 const FooterLink = styled.a`

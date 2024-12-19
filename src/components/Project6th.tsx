@@ -148,6 +148,7 @@ const PageButton = styled.button<{ active: boolean }>`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: Regular;
 
   &:hover {
     background: #174242;
