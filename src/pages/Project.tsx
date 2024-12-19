@@ -49,6 +49,7 @@ const ProjectContainer = styled.div<{ extendHeight: boolean }>`
 
 
 const Header = styled.h1`
+  font-family: SemiBold;
   font-size: 25px;
   color: white;
   margin: 0;
@@ -85,7 +86,7 @@ const DropdownWrapper = styled.div`
 
 const DropdownButton = styled.button`
   background: transparent;
-  border: 1px solid white;
+  border: 0.9px solid white;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -94,6 +95,7 @@ const DropdownButton = styled.button`
   white-space: nowrap;
   display: flex;
   align-items: center;
+  font-family: Regular;
   gap: 10px;
   height: 50px;
 
@@ -105,7 +107,7 @@ const DropdownButton = styled.button`
     padding: 8px 15px; 
     font-size: 14px; 
     height: 40px; 
-    border: 0.5px solid white;
+    border: 0.6px solid white;
     border-radius: 13px;
   }
 
@@ -132,6 +134,7 @@ const DropdownMenu = styled.ul<{ show: boolean }>`
   position: absolute;
   top: calc(100% + 10px);
   left: 50%;
+  font-family: Regular;
   transform: translateX(-50%) ${(props) => (props.show ? "translateY(0)" : "translateY(-10px)")};
   background: black;
   border-radius: 15px;
