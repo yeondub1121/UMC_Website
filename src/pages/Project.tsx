@@ -101,16 +101,20 @@ const DropdownButton = styled.button`
     background: rgba(255, 255, 255, 0.1);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 500px) {
     padding: 8px 15px; 
     font-size: 14px; 
     height: 40px; 
+    border: 0.5px solid white;
+    border-radius: 13px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 400px) {
     padding: 5px 10px; 
     font-size: 12px; 
     height: 35px; 
+    border: 0.5px solid white;
+    border-radius: 13px;
   }
 `;
 

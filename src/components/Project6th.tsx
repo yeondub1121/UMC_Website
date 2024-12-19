@@ -20,15 +20,40 @@ const ProjectGrid = styled.div`
   margin: 30px auto;
   width: 100%;
   max-width: 1200px;
+  
 
-  @media (max-width: 1024px) {
+  @media (max-width: 810px) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    display: center;
+    gap: 18px;
+    width: 90%;
+    margin-right: 50px;
   }
 
   @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    display: center;
+    gap: 18px;
+    width: 90%;
+    margin-right: 45px;
+  }
+
+  @media (max-width: 508px) {
     grid-template-columns: 1fr;
     gap: 10px;
+    margin-left: 11px;
+  }
+
+  @media (max-width: 420px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-left: 10px;
+  }
+
+  @media (max-width: 380px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-left: 1px;
   }
 `;
 
@@ -40,14 +65,17 @@ const ProjectCard = styled(motion.div)`
   max-width: 350px;
   margin: auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: 810px) {
     max-width: 100%;
     padding: 10px;
+    border-radius: 12px;
+   
   }
 
    @media (max-width: 375px) {
     max-width: 100%;
     padding: 10px;
+    border-radius: 15px;
   }
 `;
 
@@ -59,16 +87,24 @@ const ProjectImage = styled.img`
 
   @media (max-width: 768px) {
     height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    
   }
 
   @media (max-width: 395px) {
     max-width: 310px;
-    padding: 10px;
+    padding: 8px;
+    object-fit: cover;
+    border-radius: 10px;
+    
   }
 
   @media (max-width: 345px) {
     max-width: 280px;
-    padding: 10px;
+    padding: 8px;
+    object-fit: cover;
+    border-radius: 15px;
   }
 `;
 
@@ -116,7 +152,7 @@ const PageButton = styled.button<{ active: boolean }>`
   }
 
   @media (max-width: 768px) {
-    padding: 5px 8px;
+    padding: 6px 10px;
     font-size: 0.8rem;
   }
 `;
