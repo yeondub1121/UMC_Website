@@ -110,18 +110,20 @@ const ProjectImage = styled.img`
 
 const ProjectTitle = styled.h2`
   margin: 10px 0 5px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: white;
+   font-family: Regular;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 `;
 
 const ProjectDescription = styled.p`
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #d0d0d0;
   line-height: 1.4;
+   font-family: Regular;
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
@@ -146,6 +148,7 @@ const PageButton = styled.button<{ active: boolean }>`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: Regular;
 
   &:hover {
     background: #174242;

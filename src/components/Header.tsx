@@ -23,9 +23,18 @@ const NavContainer = styled.nav`
 `;
 
 const Logo = styled.img`
-  height: 60px;
+  height: 50px;
   width: auto;
 
+   @media (max-width: 768px) {
+     height: 45px;
+     width: auto;
+  }
+
+   @media (max-width: 500px) {
+     height: 40px;
+     width: auto;
+  }
 `;
 
 const NavLinks = styled.ul`
@@ -43,7 +52,7 @@ const NavLinkStyled = styled(NavLink)`
   text-decoration: none;
   font-size: 18px;
   white-space: nowrap;
-  font-weight: 500;
+  font-family: Regular;
 
   &:hover {
     color: #cfcfcf;
@@ -51,7 +60,7 @@ const NavLinkStyled = styled(NavLink)`
 
   &.active {
     color: #a9f3e3; 
-    font-weight: bold;
+    font-family: Bold;
   } 
 
   @media (max-width: 768px) {
