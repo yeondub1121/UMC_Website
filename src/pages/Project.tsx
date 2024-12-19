@@ -133,9 +133,9 @@ const DropdownArrow = styled.span`
 const DropdownMenu = styled.ul<{ show: boolean }>`
   position: absolute;
   top: calc(100% + 10px);
-  left: 50%;
+  left: 50%; 
+  transform: translateX(-50%) ${(props) => (props.show ? "translateY(0)" : "translateY(-10px)")}; 
   font-family: Regular;
-  transform: translateX(-50%) ${(props) => (props.show ? "translateY(0)" : "translateY(-10px)")};
   background: black;
   border-radius: 15px;
   padding: 10px;
@@ -147,11 +147,12 @@ const DropdownMenu = styled.ul<{ show: boolean }>`
   z-index: 1000;
 
   @media (max-width: 768px) {
-    width: 100%;
-    left: 0;
-    transform: translateX(0) ${(props) => (props.show ? "translateY(0)" : "translateY(-10px)")};
+    width: auto; 
+    left: 50%; 
+    transform: translateX(-50%) ${(props) => (props.show ? "translateY(0)" : "translateY(-10px)")};
   }
 `;
+
 
 
 const DropdownItem = styled.li`
