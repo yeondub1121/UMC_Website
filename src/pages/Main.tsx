@@ -56,7 +56,7 @@ const LogoText = styled.h3`
 
 const Description = styled.p`
   font-size: 18px; 
-  margin-bottom: 35px; 
+  margin-bottom: 45px; 
   text-align: center;
   line-height: 0.8;
   font-family: Regular;
@@ -128,7 +128,7 @@ const SchoolsTitle = styled.h2`
   margin-bottom: 22px;
   font-weight: bold;
   color: #a9f3e3;
-  margin-top: 30px;
+  margin-top: 45px;
   font-family: Bold;
 `;
 
