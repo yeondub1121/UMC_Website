@@ -57,12 +57,12 @@ const Header = styled.h1`
 
   @media (max-width: 768px) {
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-top: 10px;
   }
 
   @media (max-width: 480px) {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
 `;
 
@@ -85,22 +85,25 @@ const DropdownWrapper = styled.div`
 
 
 const DropdownButton = styled.button`
-  background: transparent;
-  border: 0.9px solid white;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 15px;
-  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #a9f3e3;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+  transition: background 0.3s ease;
+  font-family: Regular;
+
   white-space: nowrap;
   display: flex;
   align-items: center;
   font-family: Regular;
   gap: 10px;
-  height: 50px;
+  height: 47px;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
   }
 
   @media (max-width: 500px) {
