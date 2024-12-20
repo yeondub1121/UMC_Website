@@ -58,7 +58,7 @@ const Description = styled.p`
   font-size: 18px; 
   margin-bottom: 45px; 
   text-align: center;
-  line-height: 0.8;
+  line-height: 1.2;
   font-family: Regular;
 `;
 

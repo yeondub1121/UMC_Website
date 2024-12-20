@@ -110,8 +110,9 @@ const DropdownButton = styled.button`
     padding: 8px 15px; 
     font-size: 14px; 
     height: 40px; 
-    border: 0.6px solid white;
-    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #a9f3e3;
+     border-radius: 18px;
   }
 
   @media (max-width: 400px) {
@@ -119,7 +120,7 @@ const DropdownButton = styled.button`
     font-size: 12px; 
     height: 35px; 
     border: 0.5px solid white;
-    border-radius: 13px;
+    border-radius: 18px;
   }
 `;
 
