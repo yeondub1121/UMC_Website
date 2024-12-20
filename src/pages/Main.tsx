@@ -44,6 +44,7 @@ const LogoText = styled.h3`
   color:rgb(220, 243, 238);
   margin-bottom: 20px; 
   display: inline-block;
+  text-align: center; /* 텍스트를 항상 가운데 정렬 */
   animation: ${keyframes`
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
