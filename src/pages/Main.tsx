@@ -39,8 +39,9 @@ const Logo = styled.img`
 
 
 const LogoText = styled.h3`
-  font-size: 48px; 
+  font-size: 50px; 
   font-weight: bold;
+  font-family: Bold;
   color:rgb(220, 243, 238);
   margin-bottom: 20px; 
   display: inline-block;
@@ -58,6 +59,7 @@ const Description = styled.p`
   margin-bottom: 55px; 
   text-align: center;
   line-height: 1.6;
+  font-family: Regular;
 `;
 
 const Description2 = styled.p`
@@ -66,6 +68,7 @@ const Description2 = styled.p`
   text-align: center;
   line-height: 1.6;
   margin-top: 12px;
+  font-family: Regular;
 `;
 
 const ValuesTitle = styled.h2`
@@ -73,12 +76,14 @@ const ValuesTitle = styled.h2`
   margin-bottom: -5px; 
   font-weight: bold;
   color:  #a9f3e3;
+  font-family: Bold;
 `;
 
 const ValuesList = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0 0 20px;
+  font-family: Regular;
   text-align: center;
   display: flex; 
   justify-content: center; 
@@ -88,6 +93,7 @@ const ValuesList = styled.ul`
 const ValueItem = styled.li`
   font-size: 22px; 
   margin: 3px 0; 
+  font-family: Regular;
   padding: 10px 15px;
   text-align: center;
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5),
@@ -123,6 +129,7 @@ const SchoolsTitle = styled.h2`
   font-weight: bold;
   color: #a9f3e3;
   margin-top: 30px;
+  font-family: Bold;
 `;
 
 const SliderWrapper = styled.div`
@@ -168,6 +175,7 @@ const Slide = styled.div`
 const School = styled.div`
   flex: 0 1 calc(33.33% - 20px); /* 한 줄에 3개 배치 */
   padding: 10px 15px;
+  font-family: Regular;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid #a9f3e3;
