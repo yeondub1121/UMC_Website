@@ -56,7 +56,7 @@ const LogoText = styled.h3`
 
 const Description = styled.p`
   font-size: 18px; 
-  margin-bottom: 55px; 
+  margin-bottom: 35px; 
   text-align: center;
   line-height: 0.8;
   font-family: Regular;
