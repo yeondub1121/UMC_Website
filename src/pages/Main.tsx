@@ -58,7 +58,7 @@ const Description = styled.p`
   font-size: 18px; 
   margin-bottom: 55px; 
   text-align: center;
-  line-height: 1.6;
+  line-height: 0.8;
   font-family: Regular;
 `;
 
@@ -299,8 +299,10 @@ const Main: React.FC = () => {
       </LogoWrapper>
 
       <Description>
-        수정 필요 UMC는 University MakeUs Challenge 대학생 개발 연합 동아리입니다
+      (University MakeUs Challenge) UMC는 대학생 개발 연합 동아리입니다
+     <p> UMC에서는 학기중에는 파트별 스터디를, 방학에는 개발 프로젝트를 진행합니다.</p>
       </Description>
+
 
       <ValuesTitle>UMC의 핵심가치</ValuesTitle>
       <Description2>UMC는 이러한 방향성을 추구해요</Description2>
