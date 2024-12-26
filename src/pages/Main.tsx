@@ -23,10 +23,10 @@ const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 85px; 
+  width: 265px;
+  height: 90px; 
   border: 1.8px solid white;
-  border-radius: 10px;
+  border-radius: 9px;
   margin-bottom: 5px; 
   overflow: hidden;
 `;
@@ -42,7 +42,7 @@ const LogoText = styled.h3`
   font-size: 50px; 
   font-weight: bold;
   font-family: Bold;
-  color:rgb(220, 243, 238);
+  color:rgb(255, 255, 255);
   margin-bottom: 20px; 
   display: inline-block;
   text-align: center; /* 텍스트를 항상 가운데 정렬 */
@@ -51,7 +51,7 @@ const LogoText = styled.h3`
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
   `} 3s ease-in-out infinite;
-  text-shadow: 0px 0px 10px rgb(158, 216, 203), 0px 0px 20px rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 10px rgb(238, 241, 241), 0px 0px 20px rgba(255, 255, 255, 1);
 `;
 
 const Description = styled.p`
@@ -174,7 +174,7 @@ const Slide = styled.div`
 
 const School = styled.div`
   flex: 0 1 calc(33.33% - 20px); /* 한 줄에 3개 배치 */
-  padding: 10px 15px;
+  padding: 10px 10px;
   font-family: Regular;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.1);

@@ -119,8 +119,9 @@ const DropdownButton = styled.button`
     padding: 5px 10px; 
     font-size: 12px; 
     height: 35px; 
-    border: 0.5px solid white;
-    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #a9f3e3;
+    border-radius: 16px;
   }
 `;
 

@@ -17,7 +17,7 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 0 16px;
 `;
@@ -25,14 +25,11 @@ const NavContainer = styled.nav`
 const Logo = styled.img`
   height: 50px;
   width: auto;
-
    @media (max-width: 768px) {
-     height: 45px;
      width: auto;
   }
 
    @media (max-width: 500px) {
-     height: 40px;
      width: auto;
   }
 `;
