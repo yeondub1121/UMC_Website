@@ -26,7 +26,7 @@ const fadeIn = keyframes`
 
 const Subtitle = styled.h2`
   font-size: 23px;
-  margin-left: calc(25%);
+  margin-left: calc(6%);
   margin-bottom: 15px;
   margin-top: -5px;
   color: #a9f3e3;
@@ -40,7 +40,7 @@ const Subtitle2 = styled.h2`
   font-size: 23px;
   margin-bottom: 15px;
   margin-top: 25px;
-  margin-left: calc(25%);
+  margin-left: calc(6%);
   color: #a9f3e3;
   animation: ${fadeIn} 1.8s ease;
   font-family: Regular;
@@ -51,7 +51,7 @@ const Subtitle2 = styled.h2`
 const InfoText = styled.p`
   font-size: 18px;
   margin: 10px 0;
-   margin-left: calc(25%);
+  margin-left: calc(6%);
   color: #ffffff;
   animation: ${fadeIn} 2s ease;
   font-family: Regular;
@@ -62,7 +62,7 @@ const EventContainer = styled.div`
   justify-content: flex-start;
   gap: 10px;
   flex-wrap: wrap;
-   margin-left: calc(25%);
+  margin-left: calc(6%);
   margin-top: 7px;
   margin-bottom: 10px;
 `;
@@ -88,7 +88,7 @@ const PartDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-   margin-left: calc(25%);
+  margin-left: calc(6%);
   margin-top: 6px;
 `;
 
@@ -118,7 +118,7 @@ const LinkContainer = styled.div`
   margin-top: 30px;
   color: #ffffff;
   font-family: Regular;
-   margin-left: calc(25%);
+  margin-left: calc(6%);
 
   & > span {
     font-size: 18px; 
