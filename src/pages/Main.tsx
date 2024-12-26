@@ -23,7 +23,7 @@ const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 265px;
+  width: 255px;
   height: 90px; 
   border: 1.8px solid white;
   border-radius: 9px;
@@ -42,7 +42,7 @@ const LogoText = styled.h3`
   font-size: 50px; 
   font-weight: bold;
   font-family: Bold;
-  color:rgb(255, 255, 255);
+  color:rgb(226, 233, 233);
   margin-bottom: 20px; 
   display: inline-block;
   text-align: center; /* 텍스트를 항상 가운데 정렬 */
@@ -51,7 +51,7 @@ const LogoText = styled.h3`
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
   `} 3s ease-in-out infinite;
-  text-shadow: 0px 0px 10px rgb(238, 241, 241), 0px 0px 20px rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 8px rgb(198, 226, 226), 0px 0px 16px rgb(217, 224, 224);
 `;
 
 const Description = styled.p`
@@ -182,6 +182,7 @@ const School = styled.div`
   font-size: 16px;
   text-align: center;
   color: white;
+
   transition: background 0.3s ease;
 
   &:hover {
