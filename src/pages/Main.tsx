@@ -42,7 +42,7 @@ const LogoText = styled.h3`
   font-size: 50px; 
   font-weight: bold;
   font-family: Bold;
-  color:rgb(226, 233, 233);
+  color:rgb(218, 230, 230);
   margin-bottom: 20px; 
   display: inline-block;
   text-align: center; /* 텍스트를 항상 가운데 정렬 */
@@ -51,7 +51,7 @@ const LogoText = styled.h3`
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
   `} 3s ease-in-out infinite;
-  text-shadow: 0px 0px 8px rgb(198, 226, 226), 0px 0px 16px rgb(217, 224, 224);
+  text-shadow: 0px 0px 2px rgb(180, 226, 226), 0px 0px 16px rgba(205, 231, 231, 0.81);
 `;
 
 const Description = styled.p`
