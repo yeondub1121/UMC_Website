@@ -45,7 +45,7 @@ const LogoText = styled.h3`
   color:rgb(218, 230, 230);
   margin-bottom: 20px; 
   display: inline-block;
-  text-align: center; /* 텍스트를 항상 가운데 정렬 */
+  text-align: center; 
   animation: ${keyframes`
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -136,9 +136,9 @@ const SliderWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center; /* 슬라이드 전체 세로 중앙 정렬 */
+  align-items: center; 
   width: 100%;
-  height: auto; /* 부모 높이에 맞춤 */
+  height: auto; 
 `;
 
 
@@ -146,34 +146,34 @@ const SliderContainer = styled.div`
   position: relative;
   width: 80%;
   max-width: 800px;
-  height: auto; /* 높이를 자동으로 맞춤 */
+  height: auto; 
   display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
+  justify-content: center; 
   overflow: hidden;
 
   @media (max-width: 768px) {
-    width: 95%; /* 작은 화면에서는 더 넓게 */
+    width: 95%; 
   }
 `;
 
 const Slide = styled.div`
   min-width: 100%;
   display: flex;
-  justify-content: center; /* 가로 방향 중앙 정렬 */
-  align-items: center; /* 세로 방향 중앙 정렬 */
-  flex-wrap: wrap; /* 줄바꿈 허용 */
-  gap: 15px; /* 아이템 간 간격 */
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 15px; 
 
    text-align: center; 
 
   @media (max-width: 768px) {
-    gap: 10px; /* 작은 화면에서 간격 줄임 */
+    gap: 10px; 
    
   }
 `;
 
 const School = styled.div`
-  flex: 0 1 calc(33.33% - 20px); /* 한 줄에 3개 배치 */
+  flex: 0 1 calc(33.33% - 20px); 
   padding: 10px 10px;
   font-family: Regular;
   border-radius: 20px;
@@ -210,7 +210,7 @@ const ArrowWrapper = styled.div`
   cursor: pointer;
   z-index: 1000;
 
-  ${({ left }) => (left ? "left: -10px;" : "right: -10px;")} /* 좌우 위치 조정 */
+  ${({ left }) => (left ? "left: -10px;" : "right: -10px;")} 
 `;
 
 const ArrowIconLeft = styled.svg`
@@ -224,7 +224,7 @@ const ArrowIconLeft = styled.svg`
   transition: stroke 0.3s ease;
 
   &:hover {
-    stroke: #a9f3e3; /* 호버 시 색상 변경 */
+    stroke: #a9f3e3; 
   }
 `;
 
@@ -239,7 +239,7 @@ const ArrowIconRight = styled.svg`
   transition: stroke 0.3s ease;
 
   &:hover {
-    stroke: #a9f3e3; /* 호버 시 색상 변경 */
+    stroke: #a9f3e3; 
   }
 `;
 
